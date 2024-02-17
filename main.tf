@@ -11,6 +11,7 @@ module "vpc" {
     from_port          = var.from_port
     to_port            = var.to_port
 }
+
 module "ec2" {
     source = "./module/ec2"
     ami               = var.ami
@@ -18,4 +19,5 @@ module "ec2" {
     key_name          = var.key_name
     security_groups   = module.vpc.aws_security_groups
     subnet_id         = module.vpc.aws_subnet
+     Name             = var.project
 }
