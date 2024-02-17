@@ -11,7 +11,6 @@ module "vpc" {
     from_port          = var.from_port
     to_port            = var.to_port
 }
-
 module "ec2" {
     source = "./module/ec2"
     ami               = var.ami
