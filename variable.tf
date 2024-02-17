@@ -38,5 +38,5 @@ variable "instance_type" {
 }
 
 variable "key_name"  {
-    default = "ap-south-1"
+    default = "demo"
 }
