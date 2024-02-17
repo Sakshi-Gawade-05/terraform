@@ -5,6 +5,6 @@ resource "aws_instance" "my_instance" {
   security_groups        =[var.security_groups]
   subnet_id               =var.subnet_id 
   tags ={
-    name = "var.project"
+    Name = "var.project"
   }  
 }
