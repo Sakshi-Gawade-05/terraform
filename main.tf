@@ -17,7 +17,7 @@ module "ec2" {
     ami               = var.ami
     instance_type     = var.instance_type
     key_name          = var.key_name
-    aws_security_group_ids   = module.vpc.aws_security_group
+    aws_security_groups   = module.vpc.aws_security_groups
     subnet_id         = module.vpc.aws_subnet
     project            = var.project
 }
