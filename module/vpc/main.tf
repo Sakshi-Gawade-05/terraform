@@ -72,7 +72,7 @@ resource "aws_security_group" "my_security" {
 }
 
 resource "aws_vpc_security_group_ingress_rule" "my_inbound" {
-  security_group_ids   = aws_security_group.my_security.ids
+  vpc_security_group_ids   = aws_security_group.my_security.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = var.from_port
   ip_protocol       = "tcp"
