@@ -31,3 +31,21 @@ resource "aws_s3_bucket_acl" "example" {
   bucket = aws_s3_bucket.mybucket.id
   acl    = "public-read"
 }
+#put the files in s3
+resource "aws_s3_bucket_object" "index" {
+  bucket = aws_s3_bucket.mybucket.id
+  key = "index.html"
+  source = "index.html"
+  acl = "public-read"
+  content_type = "text/html"
+}
+
+resource "aws_s3_bucket_object" "error" {
+  bucket = aws_s3_bucket.mybucket.id
+  key = "error.html"
+  source = "error.html"
+  acl = "public-read"
+  content_type = "text/html"
+}
+
+resorce
