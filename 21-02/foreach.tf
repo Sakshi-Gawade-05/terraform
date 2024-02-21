@@ -13,5 +13,5 @@ for_each = toset(var.ami_id)
 }
 
 variable "ami_id" {
-   default = ["ami-0e670eb768a5fc3d4","ami-06b72b3b2a773be2b","ami-0918bbd8513a9aa3b", "ami-0918bbd8513a9aa3b"] 
+   default = ["ami-0e670eb768a5fc3d4","ami-06b72b3b2a773be2b","ami-05a5bb48beb785bf1", "ami-05a5bb48beb785bf1"] 
 }
