@@ -37,7 +37,7 @@ resource "aws_s3_bucket_acl" "example" {
 #put the files in s3
 
 resource "aws_s3_object" "index" {
-  bucket = "aws_s3_bucket.mybucket.id"
+  bucket = aws_s3_bucket.mybucket.id
   key    = "index.html"     #name of the file
   source = "index.html"     #where is the file
   acl    = "public-read"
@@ -45,7 +45,7 @@ resource "aws_s3_object" "index" {
 }
 
 resource "aws_s3_object" "error" {
-  bucket = "aws_s3_bucket.mybucket.id"
+  bucket = aws_s3_bucket.mybucket.id
   key    = "error.html"     
   source = "error.html"     
   acl    = "public-read"
@@ -53,7 +53,7 @@ resource "aws_s3_object" "error" {
 }
 
 resource "aws_s3_object" "profile" {
-  bucket = "aws_s3_bucket.mybucket.id"
+  bucket = aws_s3_bucket.mybucket.id
   key    = "profile.png"     
   source = "profile.png"    
   acl    = "public-read"
