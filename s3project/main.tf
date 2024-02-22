@@ -53,7 +53,7 @@ resource "aws_s3_object" "index" {
   bucket = "aws_s3_bucket.mybucket.id"
   key    = "index.html"     #name of the file
   source = "index.html"     #where is the file
-  acl    = public_read
+  acl    = public-read
   content_type = "text/html"
 }
 
@@ -61,7 +61,7 @@ resource "aws_s3_object" "error" {
   bucket = "aws_s3_bucket.mybucket.id"
   key    = "error.html"     
   source = "error.html"     
-  acl    = "public_read"
+  acl    = "public-read"
   content_type = "text/html"
 }
 
@@ -69,5 +69,5 @@ resource "aws_s3_object" "profile" {
   bucket = "aws_s3_bucket.mybucket.id"
   key    = "profile.png"     
   source = "profile.png"    
-  acl    = "public_read"
+  acl    = "public-read"
 }
