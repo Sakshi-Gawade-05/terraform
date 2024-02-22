@@ -25,7 +25,7 @@ resource "aws_s3_bucket_public_access_block" "example" {
   restrict_public_buckets = false
 
 }
-resource "aws_s3_bucket_acl" "example" {
+resource "aws_s3_bucket_acl" "example"   {
   depends_on = [
     aws_s3_bucket_ownership_controls.example,
     aws_s3_bucket_public_access_block.example,
@@ -36,7 +36,7 @@ resource "aws_s3_bucket_acl" "example" {
 }
 #put the files in s3
 
-resource "aws_s3_object" "index" {
+resource "aws_s3_object" "index"  {
   bucket = aws_s3_bucket.mybucket.id
   key    = "index.html"     #name of the file
   source = "index.html"     #where is the file
@@ -44,7 +44,7 @@ resource "aws_s3_object" "index" {
   content_type = "text/html"
 }
 
-resource "aws_s3_object" "error" {
+resource "aws_s3_object" "error"  {
   bucket = aws_s3_bucket.mybucket.id
   key    = "error.html"     
   source = "error.html"     
