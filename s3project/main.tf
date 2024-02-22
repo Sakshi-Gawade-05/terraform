@@ -37,7 +37,7 @@ resource "aws_s3_object" "index" {
   bucket = "aws_s3_bucket.mybucket.id"
   key    = "index.html"     #name of the file
   source = "index.html"     #where is the file
-  acl    = public-read
+  acl    = "public-read"
   content_type = "text/html"
 }
 
